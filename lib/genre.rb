@@ -16,3 +16,20 @@ class Genre
     song = Song.new(name, artist)
     song.genre = self
   end
+  
+  def songs
+    self.all.select do |song|
+      song.genre == self
+    end
+  end
+
+  def genres
+    artists = []
+    self.all.select do |song|
+      song.genre == self
+      artists << song.artist
+    end
+    artists
+  end
+end
+
