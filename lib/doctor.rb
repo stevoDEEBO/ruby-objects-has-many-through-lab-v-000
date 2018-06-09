@@ -12,8 +12,8 @@ class Doc
     @@all
   end
 
-  def new_song(name, genre)
-    song = Song.new(name, artist=self, genre)
+  def new_appointment(patient, doctor, date)
+    appointment = Appointment.new(patient, doctor=self, date)
   end
 
   def songs
