@@ -27,7 +27,7 @@ class Artist
     genres = []
     self.all.select do |song|
       song.artist == self
-      genres = song.genre
+      genres << song.genre
     end
     genres
   end
