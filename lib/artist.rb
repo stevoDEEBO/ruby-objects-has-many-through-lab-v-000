@@ -24,11 +24,8 @@ class Artist
   end
 
   def genres
-    genres = []
-    self.all.select do |song|
-      song.artist == self
-      genres << song.genre
+    songs.map do |song|
+      song.artist
     end
-    genres
   end
 end
