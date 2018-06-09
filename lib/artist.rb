@@ -18,9 +18,8 @@ class Artist
   end
 
   def songs
-    @@all.select do |song|
-      if song.artist == self
-        song.artist
+    Song.all.select do |song|
+      song.artist == self
     end
   end
 
